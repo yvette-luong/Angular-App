@@ -1,0 +1,9 @@
+<div class="contents-container">
+  <div class="content-container">
+    <h2 *ngFor="let content of contents">
+      {{ content.header }}
+      <p>{{ content.context }}</p>
+      <button class="btn">{{ content.color }}</button>
+    </h2>
+  </div>
+</div>
