@@ -1,11 +1,11 @@
 <div class="content-container">
-  <!-- <h2 *ngFor="let content of contents"> -->
   <h2>{{ content.header | titlecase }}</h2>
-  <p (click)="isToggle()">{{ content.context | myPipe: toggle }}</p>
+  <p>{{ content.context }}</p>
   <button
     class="btn"
     (click)="setColor(content.color)"
     [style.backgroundColor]="content.color"
+    [style.borderColor]="content.color"
   >
     {{ content.color }}
   </button>

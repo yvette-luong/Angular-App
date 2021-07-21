@@ -8,12 +8,13 @@
   padding: 2%;
   width: 60%;
   box-sizing: border-box;
+  border: hidden;
 }
 
 .content-container:hover {
-  border: 1px solid grey;
+  border: 1px solid;
   border-radius: 2%;
-  box-shadow: 2px 4px grey;
+  box-shadow: 2px 4px;
 }
 
 p {

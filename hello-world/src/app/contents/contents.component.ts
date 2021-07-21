@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
 import { Content } from '../Content';
 import { CONTENTS } from '../mock-contents';
 @Component({
@@ -9,7 +8,6 @@ import { CONTENTS } from '../mock-contents';
 })
 export class ContentsComponent implements OnInit {
   contents: Content[] = CONTENTS;
-  titleColor: any = 'black';
   color = '';
   @Input() content: {
     header: string;
@@ -31,9 +29,7 @@ export class ContentsComponent implements OnInit {
   setColor(value: any) {
     this.exportColor.emit(value);
   }
-  getColor(event: any) {
-    this.titleColor = event;
-  }
+
   isToggle() {
     this.toggle = !this.toggle;
   }
