@@ -1,23 +1,23 @@
 .content-container {
   display: flex;
+  margin: 4% auto;
   flex-wrap: wrap;
-  justify-content: space-around;
-  /* width: 80%; */
-}
-
-h2 {
+  flex-direction: column;
+  justify-content: center;
+  align-items: baseline;
   padding: 2%;
-  margin: 1%;
-  width: 30%;
+  width: 60%;
+  box-sizing: border-box;
 }
 
-h2:hover {
-  border-radius: 20px;
+.content-container:hover {
   border: 1px solid grey;
-  box-shadow: 2px 3px grey;
+  border-radius: 2%;
+  box-shadow: 2px 4px grey;
 }
+
 p {
   font-weight: 400;
-  color: blueviolet;
+  color: dimgrey;
   font-size: 20px;
 }

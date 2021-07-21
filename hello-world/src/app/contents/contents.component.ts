@@ -1,17 +1,40 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 import { Content } from '../Content';
 import { CONTENTS } from '../mock-contents';
 @Component({
   selector: 'app-contents',
   templateUrl: './contents.component.html',
-  styleUrls: ['./contents.component.css']
+  styleUrls: ['./contents.component.css'],
 })
 export class ContentsComponent implements OnInit {
-  contents: Content[]= CONTENTS;
+  contents: Content[] = CONTENTS;
+  titleColor: any = 'black';
   color = '';
-  constructor() { }
+  @Input() content: {
+    header: string;
+    context: string;
+    color: any;
+  } = {
+    header: '',
+    context: '',
+    color: '',
+  };
 
-  ngOnInit(): void {
+  @Output() exportColor = new EventEmitter();
+  toggle: boolean = false;
+
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  setColor(value: any) {
+    this.exportColor.emit(value);
   }
-
+  getColor(event: any) {
+    this.titleColor = event;
+  }
+  isToggle() {
+    this.toggle = !this.toggle;
+  }
 }

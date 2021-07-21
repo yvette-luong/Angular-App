@@ -2,3 +2,13 @@ h1 {
   display: flex;
   justify-content: center;
 }
+/* The wrapper of the content */
+.content-wrapper {
+  margin: 0 auto;
+  padding: 2%;
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
